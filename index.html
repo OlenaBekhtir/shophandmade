@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>HandMade</title>
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="shortcut icon" href="./img/handmade_logo.jpg" type="image/x-icon">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      max-width: 1260px;
+      width: 100%;
+      margin-inline: auto;
+      padding: 0;
+      position: relative;
+      height: 100%;
+      background-color: bisque;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text {
+      margin-left: 50px;
+      margin-right: 30px;
+      margin-top: 30px;
+      font-size: 18px;
+      text-align: justify;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header">
+        <div class="burger-icon" onclick="toggleMenu()">
+          <button class="burger btn-reset header__burger">
+            <span class="burger__line"></span>
+          </button>
+        </div>
+        <div class="wrap-menu">
+          <span class="close-icon hidden" onclick="toggleMenu()">X</span>
+          <ul class="menu-items">
+            <li><a href="./index.html">Головна</a></li>
+            <li><a href="./catalog.html">Каталог</a></li>
+            <li><a href="./basket.html">Кошик</a></li>
+          </ul>
+        </div>
+        <div class="container header__container">
+          <nav class="nav header__nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="./index.html" class="main-link nav__link--current">Головна</a></li>
+              <li class="nav__item"><a href="./catalog.html" class="main-link nav__link">Каталог</a></li>
+              <li class="nav__item"><a href="./basket.html" class="main-link nav__link nav__link">Кошик</a></li>
+            </ul>
+            <button class="nav__close btn-reset">close</button>
+            <a href="./index.html"><img class="logo-img" src="./img/handmade_logo.jpg" alt="logo" /></a>
+          </nav>
+    </header>
+
+
+    <main class="main">
+
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="banner-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="hero__content">
+                  <h2 class="hero__title">Креативні ручні вироби</h2>
+                  <p class="hero__descr">Інтернет-магазин / Магія ручної роботи</p>
+                </div>
+              </div>
+            </div>
+      </section>
+
+      <section class="text">
+        <p><span class="text__title">Хендмейд магазин "Магія ручної роботи"</span> створений для людей, які звикли
+          оточувати себе яскравими, неординарними речами. Ми
+          проти сірості, рутинності. Навпаки – тішимо клієнтів новими стильними речами ручної роботи за демократичними
+          цінами. Тому, якщо вам цікавий хендмейд – ласкаво просимо! У нашому каталозі обов'язково знайдеться щось
+          цікаве та унікальне для ваших найсміливіших забаганок.</p>
+        <p><span class="text__title">Товари ручної роботи для настрою</span><br />
+          Інколи маленька дрібниця створює атмосферу цілого образу. Тому вибір красивої прикраси ручної роботи ніколи не
+          буде зайвим.</p>
+        <p><span class="text__title">Хендмейд для твого унікального стилю</span><br />
+          Сьогодні вишиванка – це вже не просто елемент національного строю. Це – універсальна деталь гардеробу, за
+          допомогою якої можна створити образ для будь-якої нагоди.</p>
+        <p><span class="text__title">Товари для дому, роботи та особливої атмосфери</span><br />
+          Дім – місце, яке повинне надихати на творчість та великі цілі. Типові, позбавлені індивідуальності інтер'єри
+          цьому мало сприяють. Додайте рідним стінам теплих відтінків за допомогою декору ручної роботи. Створені
+          вручну, вони наповнені любов'ю, стараннями автора, несуть позитивну енергію та створюють затишок.</p>
+        <p><span class="text__title">Подарунки, які хочеться залишити собі</span><br />
+          Запросили на свято? Зробіть подарунок, який здивує та запам’ятається. Погодьтеся, товари хендмейд найкраще
+          підходять для такої цілі. Елементи декору, аксесуари з натуральних матеріалів чи навіть звичайна листівка з
+          особливим дизайном – рідні будуть розчулені вашою уважністю до деталей</p>
+      </section>
+
+      <section class="banners">
+        <div class="carousel">
+          <a href="./catalog.html">
+            <div class="carousel-container">
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide1.jpg" alt="Slide 1"></div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide2.jpg" alt="Slide 2"></div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide3.jpg" alt="Slide 3"></div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide4.jpg" alt="Slide 4"></div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide5.jpg" alt="Slide 5"></div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide6.jpg" alt="Slide 6"></div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide7.jpg" alt="Slide 7"></div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide8.jpg" alt="Slide 8"></div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide9.jpg" alt="Slide 9"></div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide10.jpg" alt="Slide 10">
+              </div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide11.jpg" alt="Slide 11">
+              </div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide12.jpg" alt="Slide 12">
+              </div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide13.jpg" alt="Slide 13">
+              </div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide14.jpg" alt="Slide 14">
+              </div>
+              <div class="carousel-item"><img class="carousel-img" src="./img/handmade_slide15.jpg" alt="Slide 15">
+              </div>
+            </div>
+          </a>
+          <button class="carousel-prev">❮</button>
+          <button class="carousel-next">❯</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__content">
+          <div class="footer__top">
+            <div class="footer__column">
+              <h4 class="footer__title">Обслуговування</h4>
+              <ul class="footer__list">
+                <li class="footer__item"><a href="tel:+38099112233" class="footer__link">Тел.: +38 099 111 22 33</a>
+                </li>
+                <li class="footer__item"><a href="#" class="footer__link">Чат</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Про нас</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Правила & Умови</a></li>
+              </ul>
+            </div>
+            <div class="footer__column">
+              <h4 class="footer__title">Компанія</h4>
+              <ul class="footer__list">
+                <li class="footer__item"><a href="tel:+8665972742" class="footer__link">Наша діяльність</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Доступні сервіси</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Останні дописи</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Питання/відповіді</a></li>
+              </ul>
+            </div>
+            <div class="footer__column">
+              <h3 class="footer__title">Наш бюлетень</h3>
+              <form action="#" class="footer__form subscribe-form">
+                <h4 class="subscribe-form__title">Приєднуйтеся до нашого списку клієнтів та отримайте знижку 15% на
+                  першу покупку!</h4>
+                <label class="subscribe-form__field">
+                  <input type="email" required placeholder="Email Address">
+                </label>
+                <button class="subscribe-form__btn btn-reset" type="submit">Підпишіться на розсилку</button>
+              </form>
+              <span class="footer__text">*Не хвилюйтесь, ми не розсилаємо спам!</span>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__left">
+              <ul class="footer__list footer__list--row">
+                <li class="footer__item"><a href="#" class="footer__link footer__link--row">Правила повернення
+                    товару</a></li>
+                <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика
+                    конфіденційності</a></li>
+              </ul>
+            </div>
+            <div class="footer__right">
+              <ul class="social footer__social">
+                <li class="social__item"><a href="#" class="social__link social__link--tw"
+                    aria-label="Go to twitter"></a></li>
+                <li class="social__item"><a href="https://www.facebook.com/vntu.official/"
+                    class="social__link social__link--fb" aria-label="Go to facebook"></a></li>
+                <li class="social__item"><a href="#" class="social__link social__link--in"
+                    aria-label="Go to instagram"></a></li>
+                <li class="social__item"><a href="#" class="social__link social__link--pin"
+                    aria-label="Go to pinterest"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+    const container = document.querySelector('.carousel-container');
+
+    function showSlide(index) {
+      if (index < 0) {
+        currentIndex = totalItems - 3;
+      } else if (index >= totalItems - 2) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+
+      const newTransformValue = -currentIndex * (100 / 5) + '%';
+      container.style.transform = 'translateX(' + newTransformValue + ')';
+      updateButtons();
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    function updateButtons() {
+      document.querySelector('.carousel-prev').disabled = currentIndex === 0;
+      document.querySelector('.carousel-next').disabled = currentIndex >= totalItems - 11;
+    }
+
+    document.querySelector('.carousel-prev').addEventListener('click', prevSlide);
+    document.querySelector('.carousel-next').addEventListener('click', nextSlide);
+
+    updateButtons();
+
+    function toggleMenu() {
+      const wrapMenu = document.querySelector('.wrap-menu');
+      const menuItems = document.querySelector('.menu-items');
+      const burgerIcon = document.querySelector('.burger-icon');
+      const closeIcon = document.querySelector('.close-icon');
+
+      menuItems.classList.toggle('active');
+      wrapMenu.classList.toggle('active');
+      burgerIcon.classList.toggle('active');
+      closeIcon.classList.toggle('hidden'); // Додано перевірку для приховування/показу іконки
+    }
+
+  </script>
+
+
+</body>
+
+</html>

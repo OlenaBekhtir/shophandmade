@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>HandMade</title>
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="shortcut icon" href="./img/handmade_logo.jpg" type="image/x-icon">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      max-width: 1260px;
+      background-color: bisque;
+    }
+
+    .catalog {
+      margin-top: 120px;
+      margin-inline: 70px;
+    }
+
+    #product-details {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="burger-icon" onclick="toggleMenu()">
+      <button class="burger btn-reset header__burger">
+        <span class="burger__line"></span>
+      </button>
+    </div>
+    <div class="wrap-menu">
+      <span class="close-icon hidden" onclick="toggleMenu()">X</span>
+      <ul class="menu-items">
+        <li><a href="./index.html">Головна</a></li>
+        <li><a href="./catalog.html">Каталог</a></li>
+        <li><a href="./basket.html">Кошик</a></li>
+      </ul>
+    </div>
+    <div class="container header__container">
+      <nav class="nav header__nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="./index.html" class="main-link nav__link--current">Головна</a></li>
+          <li class="nav__item"><a href="./catalog.html" class="main-link nav__link">Каталог</a></li>
+          <li class="nav__item"><a href="./basket.html" class="main-link nav__link nav__link">Кошик</a></li>
+        </ul>
+        <button class="nav__close btn-reset">close</button>
+        <a href="./index.html"><img class="logo-img" src="./img/handmade_logo.jpg" alt="logo" /></a>
+      </nav>
+</header>
+
+
+  <main class="main">
+    <section class="catalog">
+      <div class="catalog-content">
+        <div class="container container-narrow">
+          <div class="catalog-filters">
+  <button class="hide-filters btn-reset">Скинути фільтри</button>
+  <div class="catalog-filter catalog-filter--open">
+    <div class="catalog-filter__top">
+      <div class="catalog-filter__caption">
+        <h3 class="catalog-filter__title">Категорії</h3>
+      </div>
+    </div>
+    <div class="catalog-filter__bottom">
+      <ul class="catalog-filter__items">
+        <li class="catalog-filter__item">
+          <label class="custom-checkbox" data-text="BVyshivanky">
+            <input type="checkbox" class="custom-checkbox__input visually-hidden">
+            <span class="custom-checkbox__text">Вишиванки</span>
+          </label>
+        </li>
+        <li class="catalog-filter__item">
+          <label class="custom-checkbox" data-text="Prycrasy">
+            <input type="checkbox" class="custom-checkbox__input visually-hidden">
+            <span class="custom-checkbox__text">Прикраси</span>
+          </label>
+        </li>
+        <li class="catalog-filter__item">
+          <label class="custom-checkbox" data-text="Sumky">
+            <input type="checkbox" class="custom-checkbox__input visually-hidden">
+            <span class="custom-checkbox__text">Сумки</span>
+          </label>
+        </li>
+        <li class="catalog-filter__item">
+          <label class="custom-checkbox" data-text="Smakolyky">
+            <input type="checkbox" class="custom-checkbox__input visually-hidden">
+            <span class="custom-checkbox__text">Смаколики</span>
+          </label>
+        </li>
+        <li class="catalog-filter__item">
+          <label class="custom-checkbox" data-text="Acsecuary">
+            <input type="checkbox" class="custom-checkbox__input visually-hidden">
+            <span class="custom-checkbox__text">Аксесуари</span>
+          </label>
+        </li>
+        <li class="catalog-filter__item">
+          <label class="custom-checkbox" data-text="Decor">
+            <input type="checkbox" class="custom-checkbox__input visually-hidden">
+            <span class="custom-checkbox__text">Декор для дому</span>
+          </label>
+        </li>
+        <li class="catalog-filter__item">
+          <label class="custom-checkbox" data-text="Kartyny">
+            <input type="checkbox" class="custom-checkbox__input visually-hidden">
+            <span class="custom-checkbox__text">Картини</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+          <div id="product-details"></div>
+
+          <div class="catalog-grid">
+            <div class="catalog-grid__props catalog-props">
+              <div class="catalog-props__top">
+                <button class="btn-reset catalog-mobile-filters">
+                  <svg height="394pt" viewBox="-5 0 394 394.00003" width="394pt" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="m367.820312 0h-351.261718c-6.199219-.0117188-11.878906 3.449219-14.710938 8.960938-2.871094 5.585937-2.367187 12.3125 1.300782 17.414062l128.6875 181.285156c.042968.0625.089843.121094.132812.183594 4.675781 6.3125 7.207031 13.960938 7.21875 21.816406v147.800782c-.027344 4.375 1.691406 8.582031 4.773438 11.6875 3.085937 3.101562 7.28125 4.851562 11.65625 4.851562 2.222656-.003906 4.425781-.445312 6.480468-1.300781l72.3125-27.570313c6.476563-1.980468 10.777344-8.09375 10.777344-15.453125v-120.015625c.011719-7.855468 2.542969-15.503906 7.214844-21.816406.042968-.0625.089844-.121094.132812-.183594l128.691406-181.289062c3.667969-5.097656 4.171876-11.820313 1.300782-17.40625-2.828125-5.515625-8.511719-8.9765628-14.707032-8.964844zm0 0" />
+                  </svg>
+                  <span>Filters</span>
+                </button>
+                <div class="catalog-props__columns catalog-columns">
+                  <span class="catalog-columns__text">Кількість колонок:</span>
+                  <ul class="catalog-columns__list">
+                    <li class="catalog-columns__item"><button class="btn-reset main-link catalog-columns__btn"
+                        data-columns="3">3</button></li>
+                    <li class="catalog-columns__item"><button
+                        class="btn-reset main-link catalog-columns__btn catalog-columns__btn--current"
+                        data-columns="4">4</button>
+                    </li>
+                    <li class="catalog-columns__item"><button class="btn-reset main-link catalog-columns__btn"
+                        data-columns="5">5</button></li>
+                  </ul>
+                </div>
+
+                <select class="custom-select" id="sortSelect">
+                  <option class="custom-select__item" value="name">Відсортувати по назві</option>
+                  <option class="custom-select__item" value="cheap">Спочатку дешевші</option>
+                  <option class="custom-select__item" value="expensive">Спочатку дорожчі</option>
+                </select>
+
+              </div>
+              <div class="catalog-props__choice catalog-choice">
+                <button class="btn-reset catalog-choice__clear">Clear all</button>
+              </div>
+
+              <div id="products-container" class="catalog-grid__content"></div>
+              <script>
+
+  // Список товарів
+
+  const products = [
+    {
+      "name": "BVyshivanky",
+      "title": "Вишиванка Жоржина",
+      "price": 6500.00,
+      "image": "./img/vyshivanky_prod1.jpg",
+      "info": "Матеріали: Натуральний льон, шифон, шовкові нитки",
+      colors: {
+        "спереду": "./img/vyshivanky_prod1_1.jpg",
+        "ззаду": "./img/vyshivanky_prod1_2.jpg",
+        "вишивка": "./img/vyshivanky_prod1_3.jpg",
+      }
+    },
+    {
+      "name": "BVyshivanky",
+      "title": "Вишиванка Медуниця",
+      "price": 7500.00,
+      "image": "./img/vyshivanky_prod2.jpg",
+      "info": "Матеріали: Шифон, шовкові нитки, гудзики",
+      colors: {
+        "спереду": "./img/vyshivanky_prod2_1.jpg",
+        "ззаду": "./img/vyshivanky_prod2_2.jpg",
+        "вишивка": "./img/vyshivanky_prod2_3.jpg",
+      }
+    },
+    {
+      "name": "BVyshivanky",
+      "title": "Вишита блузка",
+      "price": 16850.00,
+      "image": "./img/vyshivanky_prod3.jpg",
+      "info": "Матеріали: домоткане полотно (бавовна + льон). Термін виконання: 45 днів",
+      colors: {
+        "спереду": "./img/vyshivanky_prod3_1.jpg",
+        "збоку": "./img/vyshivanky_prod3_2.jpg",
+        "вишивка": "./img/vyshivanky_prod3_3.jpg",
+      }
+    },
+    {
+      "name": "BVyshivanky",
+      "title": "Вишиванка Папороть",
+      "price": 5600.00,
+      "image": "./img/vyshivanky_prod4.jpg",
+      "info": "Матеріали: Сорочкова тканина, машинна вишивка, шовкові нитки",
+      colors: {
+        "спереду": "./img/vyshivanky_prod4_1.jpg",
+        "ззаду": "./img/vyshivanky_prod4_2.jpg",
+        "вишивка": "./img/vyshivanky_prod4_3.jpg",
+      }
+    },
+    {
+      "name": "BVyshivanky",
+      "title": "Вишиванка Клер",
+      "price": 12100.00,
+      "image": "./img/vyshivanky_prod5.jpg",
+      "info": "Матеріали: льон 100%. Фіалкова блуза з ніжною флористичною вишивкою хрестиком. Об'ємні рукави прикрашені старовинною технікою драпірування тканини - пухликами ручної роботи. Виріб застібається спереду на кнопки",
+      colors: {
+        "спереду": "./img/vyshivanky_prod5_1.jpg",
+        "ззаду": "./img/vyshivanky_prod5_2.jpg",
+        "вишивка": "./img/vyshivanky_prod5_3.jpg",
+      }
+    },
+    {
+      "name": "Prycrasy",
+      "title": "Прикраса кільце",
+      "price": 2072.00,
+      "image": "./img/prycrasy_prod1.jpg",
+      "info": "Матеріали: Срібна каблучка 925°проби(має пробу та завірина у фахівця) вкрита радієм з натуральними лунними камінцями. Безрозмірна.",
+      colors: {
+        "на руці": "./img/prycrasy_prod1_1.jpg",
+        "збоку": "./img/prycrasy_prod1_2.jpg",
+      }
+    },
+    {
+      "name": "Prycrasy",
+      "title": "Прикраса перстень",
+      "price": 1080.00,
+      "image": "./img/prycrasy_prod2.jpg",
+      "info": "Матеріали: натроліт, срібло 925 пр",
+      colors: {
+        "на руці": "./img/prycrasy_prod2_1.jpg",
+        "збоку": "./img/prycrasy_prod2_2.jpg",
+      }
+    },
+    {
+      "name": "Prycrasy",
+      "title": "Прикраса браслет",
+      "price": 490.00,
+      "image": "./img/prycrasy_prod3.jpg",
+      "info": "Матеріали: Цитрин, сердолік, агат, намистини бронзового кольору",
+      colors: {
+        "зверху": "./img/prycrasy_prod3_1.jpg",
+        "розстібнутий": "./img/prycrasy_prod3_2.jpg",
+        "збільшене": "./img/prycrasy_prod3_3.jpg",
+      }
+    },
+    {
+      "name": "Prycrasy",
+      "title": "Прикраса браслет",
+      "price": 504.00,
+      "image": "./img/prycrasy_prod4.jpg",
+      "info": "Матеріали: Сердолік, агат, авантюрин, фурнітура",
+      colors: {
+        "зверху": "./img/prycrasy_prod4_1.jpg",
+        "на руці": "./img/prycrasy_prod4_2.jpg",
+        "розстібнутий": "./img/prycrasy_prod4_3.jpg"
+      }
+    },
+    {
+      "name": "Prycrasy",
+      "title": "Прикраса сережки",
+      "price": 350.00,
+      "image": "./img/prycrasy_prod5.jpg",
+      "info": "Матеріали: Сережки з натуральним родонітом, довжина разом з гачком 53мм,дуже легкі.",
+      colors: {
+        "збоку": "./img/prycrasy_prod5_1.jpg",
+        "збільшене": "./img/prycrasy_prod5_2.jpg",
+      }
+    },
+    {
+      "name": "Sumky",
+      "title": "Сумка Сонце Карпат",
+      "price": 3575.00,
+      "image": "./img/sumky_prod1.jpg",
+      "info": "Виготовлена з натуральної шкіри Всередині 2 кишеньки. Пасок через плече регулюється-довжина 158 см Практична та вмістима. ",
+      "colors": {
+        "збоку": "./img/sumky_prod1_1.jpg",
+        "зсередини": "./img/sumky_prod1_2.jpg",
+        "зверху": "./img/sumky_prod1_3.jpg"
+      }
+    },
+    {
+      "name": "Sumky",
+      "title": "Сумка еко",
+      "price": 476.00,
+      "image": "./img/sumky_prod2.jpg",
+      "info": "Авторський шопер(екосумка) ручної роботи для ваших покупок, для роботи, для пікніку, для речей, на подарунок Вмісткий та комфортний Застібка міцна кнопка Текстильні міцні ручки",
+      "colors": {
+        "збоку": "./img/sumky_prod2_1.jpg",
+        "збільшене": "./img/sumky_prod2_2.jpg",
+      }
+    },
+    {
+      "name": "Sumky",
+      "title": "Сумка Баранець",
+      "price": 3705.00,
+      "image": "./img/sumky_prod3.jpg",
+      "info": "Ваша улюблена практична сумка Баранці. Натуральна шкіра українського виробника Власне виробництво продукції Якісна фурнітура Орнаменти розроблені художником Пасок через плече який Розмір 24-22-8 см",
+      "colors": {
+        "спереду": "./img/sumky_prod3_1.jpg",
+        "зсередини": "./img/sumky_prod3_2.jpg",
+      }
+    },
+    {
+      "name": "Sumky",
+      "title": "Сумка рюкзак",
+      "price": 3769.00,
+      "image": "./img/sumky_prod4.jpg",
+      "info": "Шкіряний рюкзак Пейзаж - це поєднання стилю та міцності, дуже вмісткий та практичний. Оздоблений красивим орнаментом Рюкзак має одне велике відділення та зовнішній карманчик на магніті. Шлейки регулюються, що дає можливість регулювати розмір ремінців.",
+      "colors": {
+        "зверху": "./img/sumky_prod4_1.jpg",
+        "збоку": "./img/sumky_prod4_2.jpg",
+        "ззаду": "./img/sumky_prod4_3.jpg",
+      }
+    },
+    {
+      "name": "Sumky",
+      "title": "Сумка шопер",
+      "price": 2520.00,
+      "image": "./img/sumky_prod5.jpg",
+      "info": "Оригінальний шопер Ручної роботи. Вишитий в техніці килимова вишивка. Вмісткий та зручний. На замовлення можливо виготовити в інших кольорах та іншу вишивку.",
+      "colors": {
+        "збоку": "./img/sumky_prod5_1.jpg",
+        "зсередини": "./img/sumky_prod5_2.jpg",
+        "ззаду": "./img/sumky_prod5_3.jpg",
+      }
+    },
+    {
+      "name": "Smakolyky",
+      "title": "Смаколики Медовик",
+      "price": 1036.00,
+      "image": "./img/smakolyky_prod1.jpg",
+      "info": "Матеріали: Мед, чорнослив, вершки, сир, карамель. Термін виконання: 3 дні",
+      "colors": {
+        "цілий": "./img/smakolyky_prod1.jpg",
+        "розрізаний": "./img/smakolyky_prod1_1.jpg",
+      }
+    },
+    {
+      "name": "Smakolyky",
+      "title": "Смаколики Торт для хлопчиків",
+      "price": 460.00,
+      "image": "./img/smakolyky_prod2.jpg",
+      "info": "Коржовий тортик. Є 10 варіантів смаків. З радістю підберемо для Вас улюблений смак. Ціна 403-460 грн/кг (залежить від обраного смаку). Декор обраховується окремо та додається до вартості готового виробу.",
+      "colors": {
+        "гонки": "./img/smakolyky_prod2_1.jpg",
+        "супергерой": "./img/smakolyky_prod2_2.jpg",
+        "ведмедик": "./img/smakolyky_prod2_3.jpg"
+      }
+    },
+    {
+      "name": "Smakolyky",
+      "title": "Смаколики Торт Орео",
+      "price": 1150.00,
+      "image": "./img/smakolyky_prod3.jpg",
+      "info": "Матеріали: Шоколад, вершки, сир, какао, печиво Орео. Термін виконання: 3 дні",
+      "colors": {
+        "цілий": "./img/smakolyky_prod3.jpg",
+        "розрізаний": "./img/smakolyky_prod3_1.jpg",
+      }
+    },
+    {
+      "name": "Smakolyky",
+      "title": "Смаколики Торт весільний",
+      "price": 2072.00,
+      "image": "./img/smakolyky_prod4.jpg",
+      "info": "Коржовий тортик. Є 10 варіантів смаків. З радістю підберемо для Вас улюблений смак. Ціна 460-518 грн/кг (залежить від обраного смаку). Декор обраховується окремо та додається до вартості готового виробу.",
+      "colors": {
+        "квіти": "./img/smakolyky_prod4_1.jpg",
+        "літаки": "./img/smakolyky_prod4_2.jpg",
+        "кільця": "./img/smakolyky_prod4_3.jpg",
+      }
+    },
+    {
+      "name": "Smakolyky",
+      "title": "Смаколики Торт для леді",
+      "price": 460.00,
+      "image": "./img/smakolyky_prod5.jpg",
+      "info": "Коржовий тортик. Є 10 варіантів смаків. З радістю підберемо для Вас улюблений смак. Ціна 403-460 грн/кг (залежить від обраного смаку). Декор обраховується окремо та додається до вартості готового виробу.",
+      "colors": {
+        "ніжний": "./img/smakolyky_prod5_1.jpg",
+        "кульки": "./img/smakolyky_prod5_2.jpg",
+        "принцеси": "./img/smakolyky_prod5_3.jpg",
+      }
+    },
+    {
+      "name": "Acsecuary",
+      "title": "Аксесуар Гаманець",
+      "price": 1112.00,
+      "image": "./img/acsecuary_prod1.jpg",
+      "info": "Стильний гаманець з натуральної шкіри crazy horse Орнаменти для тиснення розроблені художником Власне виробництво продукції Зручні та практичні Всередині 6 відділень на картки, 2 великі відділення на купюри та відділення на копійки на замочку",
+      "colors": {
+        "збільшене": "./img/acsecuary_prod1_1.jpg",
+        "зсередини": "./img/acsecuary_prod1_2.jpg",
+      }
+    },
+    {
+      "name": "Acsecuary",
+      "title": "Аксесуар Перчатки",
+      "price": 980.00,
+      "image": "./img/acsecuary_prod2.jpg",
+      "info": "М'які, ніжні до рук, достатньо тоненькі, щоб почуватись комфортно та зберігати тепло. Можна замовити в іншому кольорі, під Ваші розміри",
+      "colors": {
+        "зверху": "./img/acsecuary_prod2_1.jpg",
+        "зсередини": "./img/acsecuary_prod2_2.jpg",
+      }
+    },
+    {
+      "name": "Acsecuary",
+      "title": "Аксесуар Свічка",
+      "price": 280.00,
+      "image": "./img/acsecuary_prod3.jpg",
+      "info": "Матеріали: Форма з високоміцного гіпсу, соєвий віск (85 г), якісна аромаолія (має солодкуватий аромат)",
+      "colors": {
+        "біла, червона, чорна": "./img/acsecuary_prod3_1.jpg",
+        "рожева": "./img/acsecuary_prod3.jpg",
+      }
+    },
+    {
+      "name": "Acsecuary",
+      "title": "Аксесуар Обкладинка паспорта",
+      "price": 384.00,
+      "image": "./img/acsecuary_prod4.jpg",
+      "info": "Обкладинка для паспорта жіноча шкіряна бордова з тисненням Калина, Натуральна шкіра вищої якості",
+      "colors": {
+        "розгорнутий": "./img/acsecuary_prod4_1.jpg",
+        "зсередини": "./img/acsecuary_prod4_2.jpg",
+        "ззаду": "./img/acsecuary_prod4_3.jpg"
+      }
+    },
+    {
+      "name": "Acsecuary",
+      "title": "Аксесуар Гільзи-брелоки",
+      "price": 210.00,
+      "image": "./img/acsecuary_prod5.jpg",
+      "info": "Гільзи-брелоки, Брелок Київ, Брелоки жовто-блакитні, Український сувенір, Брелок з квітами.",
+      "colors": {
+        "зверху": "./img/acsecuary_prod5_1.jpg",
+        "на підвісці": "./img/acsecuary_prod5_2.jpg",
+        "з обох боків": "./img/acsecuary_prod5_3.jpg"
+      }
+    },
+    {
+      "name": "Decor",
+      "title": "Декор Автомобіль-свічка",
+      "price": 350.00,
+      "image": "./img/decor_prod1.jpg",
+      "info": "Матеріали: Високоміцний гіпс, якісні соєвий віск (50 мл) і аромаолія, дерев’яний гніт, що потріскує як камін.",
+      "colors": {
+        "кремовий": "./img/decor_prod1_1.jpg",
+        "червоний": "./img/decor_prod1_2.jpg",
+        "спереду": "./img/decor_prod1_3.jpg"
+      }
+    },
+    {
+      "name": "Decor",
+      "title": "Декор Різдвяний",
+      "price": 350.00,
+      "image": "./img/decor_prod2.jpg",
+      "info": "Настінний декор у вигляді серця та Санта Клауса. Довжина 29 см + мотузка. Чудово підійде як подарунок на Різдвяні свята",
+      "colors": {
+        "збільшене": "./img/decor_prod2_1.jpg",
+        "збоку": "./img/decor_prod2_2.jpg",
+        "спереду": "./img/decor_prod2_3.jpg",
+      }
+    },
+    {
+      "name": "Decor",
+      "title": "Декор Новорічний",
+      "price": 700.00,
+      "image": "./img/decor_prod3.jpg",
+      "info": "Набір Новорічних іграшок. Яскраві і чарівні медальйони ручної роботи в техніці декупаж та декоровані стрічкою з прошвою",
+      "colors": {
+        "збільшене": "./img/decor_prod3_1.jpg",
+        "зверху": "./img/decor_prod3.jpg",
+      }
+    },
+    {
+      "name": "Decor",
+      "title": "Декор Стефанія",
+      "price": 2100.00,
+      "image": "./img/decor_prod4.jpg",
+      "info": "Лялька в єдиному екземплярі, ручна робота. Всередині м'яка, без каркасу, наповнена холофайбером. Капелюх та жилетка знімаються. У вартість ляльки входить дерев'яна підставка (висота 28 см, діаметр 9 см, вага 88 г) та подарункова біла коробка (36*16*8, см)",
+      "colors": {
+        "збоку": "./img/decor_prod4_1.jpg",
+        "окремі елементи": "./img/decor_prod4_2.jpg",
+        "ззаду": "./img/decor_prod4_3.jpg"
+      }
+    },
+    {
+      "name": "Decor",
+      "title": "Декор Чашка подарункова",
+      "price": 770.00,
+      "image": "./img/decor_prod5.jpg",
+      "info": "Чашка з ручним розписом в стилі дот-арт. Покрита спеціальним лаком і закріплена термофіксацією. Не липне до рук під час використання. Чашка керамічна, біла глянцева зовні, біла всередині. 300 мл. Підходить для гарячих і холодних напоїв.",
+      "colors": {
+        "різні кольори": "./img/decor_prod5_1.jpg",
+        "збоку": "./img/decor_prod5_2.jpg",
+      }
+    },
+    {
+      "name": "Decor",
+      "title": "Декор Подушка Етно",
+      "price": 1330.00,
+      "image": "./img/decor_prod6.jpg",
+      "info": "Чудова декоративна подушечка виконана в техніці килимова вишивка. Ззаду доповнена декоративним мереживом. В даній подушці використано старовинний етно орнамент птаха з подільського килима. Розмір 41*41",
+      "colors": {
+        "різні кольори": "./img/decor_prod6_1.jpg",
+        "з усіх боків": "./img/decor_prod6_2.jpg",
+      }
+    },
+    {
+      "name": "Kartyny",
+      "title": "Картина Квітковий бум",
+      "price": 5180.00,
+      "image": "./img/kartyny_prod1.jpg",
+      "info": "Матеріали: Полотно, олія. Розміри: г 2 х д 65 х ш 50 см. Вага: 800.00 г",
+      colors: {
+        "збоку": "./img/kartyny_prod1_1.jpg",
+        "збільшене": "./img/kartyny_prod1_2.jpg",
+        "загальний": "./img/kartyny_prod1_3.jpg",
+      }
+    },
+    {
+      "name": "Kartyny",
+      "title": "Картина Гранати",
+      "price": 5180.00,
+      "image": "./img/kartyny_prod2.jpg",
+      "info": "Картина з гранатовим деревом, виконана олійними фарбами на полотні, натягнутому на дерев'яний підрамник.",
+      colors: {
+        "у рамці": "./img/kartyny_prod2_1.jpg",
+        "без рамки": "./img/kartyny_prod2_2.jpg",
+      }
+    },
+    {
+      "name": "Kartyny",
+      "title": "Картина Синичка",
+      "price": 2100.00,
+      "image": "./img/kartyny_prod3.jpg",
+      "info": "Українська синичка на зимовій калині. Матеріали: олійні фарби, лак, двп. Розміри: д 20 х ш 30 см",
+      colors: {
+        "збільшене": "./img/kartyny_prod3_1.jpg",
+        "загальний": "./img/kartyny_prod3_2.jpg",
+      }
+    },
+    {
+      "name": "Kartyny",
+      "title": "Картина Ласиця",
+      "price": 4660.00,
+      "image": "./img/kartyny_prod4.jpg",
+      "info": "Малюнок виконано на витриманій деревені волоського горіху, завдяки напівпрозорому нанесенню фарби природний візерунок гармонійно стає частиною зображення. Це невеличка картинка для полички або столика. Пухнаста красуня прикрасить собою вашу оселю та буде її берегти",
+      colors: {
+        "збільшене": "./img/kartyny_prod4_1.jpg",
+        "загальний": "./img/kartyny_prod4_2.jpg",
+      }
+    },
+    {
+      "name": "Kartyny",
+      "title": "Картина Атлантида",
+      "price": 7200.00,
+      "image": "./img/kartyny_prod5.jpg",
+      "info": "Картина в інтер'єр, виконана в сучасній техніці Resin Art, білий колір світиться вночі",
+      colors: {
+        "збільшене": "./img/kartyny_prod5_1.jpg",
+        "загальний": "./img/kartyny_prod5_2.jpg",
+      }
+    }
+  ]
+
+
+  // Получаем контейнер для товаров
+  const productsContainer = document.getElementById("products-container");
+
+  // Отримуємо контейнер для відображення деталей товару
+  const productDetailsContainer = document.getElementById("product-details");
+
+  // Отримуємо список кнопок для зміни кількості колонок
+  const buttons = document.querySelectorAll(".catalog-columns__btn");
+
+  // Змінна для зберігання поточної кількості колонок
+  let currentColumns = 4; // Значення за замовчуванням
+
+
+  // Додаємо обробник подій для кожної кнопки
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+      // Отримуємо значення атрибута data-columns кнопки
+      const columns = parseInt(this.getAttribute("data-columns"));
+
+      // Змінюємо значення поточної кількості колонок
+      currentColumns = columns;
+
+      // Видаляємо клас catalog-columns__btn--current у всіх кнопок
+      buttons.forEach(btn => {
+        btn.classList.remove("catalog-columns__btn--current");
+      });
+
+      // Додаємо клас catalog-columns__btn--current обраній кнопці
+      this.classList.add("catalog-columns__btn--current");
+
+      // Викликаємо функцію для зміни кількості колонок та стилів
+      changeColumns(currentColumns);
+
+      // Получаем все чекбоксы категорий
+      const categoryCheckboxes = document.querySelectorAll('.custom-checkbox__input');
+
+      // Получаем все товары
+      const productsArr = document.querySelectorAll('.product');
+
+
+      // Добавляем обработчик события для каждого чекбокса
+      categoryCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateProducts);
+      });
+
+      // Знаходимо кнопку "Скинути фільтри"
+      const resetFiltersButton = document.querySelector('.hide-filters.btn-reset');
+
+      // Додаємо обробник події для кнопки
+      resetFiltersButton.addEventListener('click', () => {
+        // Скидуємо всі вибрані чекбокси категорій
+        categoryCheckboxes.forEach(checkbox => {
+          checkbox.checked = false;
+        });
+        // Отображаем все продукты
+        productsArr.forEach(product => {
+          product.style.display = 'flex';
+        });
+      });
+
+
+      // Функция для обновления отображаемых товаров в зависимости от выбранных категорий
+      function updateProducts() {
+        // Получаем выбранные категории
+        const selectedCategories = Array.from(categoryCheckboxes)
+          .filter(checkbox => checkbox.checked)
+          .map(checkbox => checkbox.parentElement.dataset.text);
+
+        // Перебираем все товары и скрываем/показываем их в зависимости от выбранных категорий
+        productsArr.forEach(product => {
+          const productCategory = product.dataset.category;
+
+          if (selectedCategories.length === 0 || selectedCategories.includes(productCategory)) {
+            product.style.display = 'flex';
+          } else {
+            product.style.display = 'none';
+          }
+        });
+      }
+
+      // Фільтруємо товары по категориям
+      const sortedProducts = Array.from(productsArr).sort((a, b) => {
+        const titleA = a.dataset.category.toUpperCase();
+        const titleB = b.dataset.category.toUpperCase();
+
+        if (titleA < titleB) {
+          return -1;
+        }
+        if (titleA > titleB) {
+          return 1;
+        }
+        return 0;
+      });
+
+      // Очищаем контейнер перед добавлением відфільтрованих товаров
+      productsContainer.innerHTML = '';
+
+      // Добавляем відфільтровані товари к контейнеру на странице
+      sortedProducts.forEach(product => {
+        productsContainer.appendChild(product);
+      });
+
+
+
+      // СОРТУВАННЯ ТОВАРІВ ПО ЦІНІ ТА НАЗВІ
+
+      // Фільтруємо товари по ціні
+      const sortProductsByPrice = () => {
+        // Отримуємо значення вибору з селектора
+        const selectedValue = sortSelect.value;
+
+        if (selectedValue === 'name') {
+          // Очищаем контейнер перед добавлением відфільтрованих товаров
+          productsContainer.innerHTML = '';
+
+          // Добавляем відфільтровані товари к контейнеру на странице
+          sortedProducts.forEach(product => {
+            productsContainer.appendChild(product);
+          });
+        }
+
+        // Якщо вибрано опцію "Спочатку дешевші" або "Спочатку дорожчі"
+        if (selectedValue === 'cheap' || selectedValue === 'expensive') {
+          // Створюємо копію масиву товарів для сортування
+          const sortedProducts = Array.from(productsArr);
+
+          // Сортуємо товари за ціною
+          sortedProducts.sort((a, b) => {
+            const priceA = parseFloat(a.querySelector('p').textContent.split(' ')[1]);
+            const priceB = parseFloat(b.querySelector('p').textContent.split(' ')[1]);
+
+            return selectedValue === 'cheap' ? priceA - priceB : priceB - priceA;
+          });
+
+          // Очищаємо контейнер перед додаванням відсортованих товарів
+          productsContainer.innerHTML = '';
+
+          // Додаємо відсортовані товари до контейнеру на сторінці
+          sortedProducts.forEach(product => {
+            productsContainer.appendChild(product);
+          });
+        }
+      };
+
+      // Додаємо обробник подій для селектора
+      sortSelect.addEventListener('change', sortProductsByPrice);
+
+    });
+  });
+
+  // Отримуємо кошик з локального сховища при завантаженні сторінки
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // Функція для зміни кількості колонок та стилів
+  function changeColumns(columns) {
+    // Змінюємо стиль grid-template-columns відповідно до нової кількості колонок
+    productsContainer.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
+
+    // Очищаємо контейнер перед зміною кількості колонок
+    productsContainer.innerHTML = "";
+
+    // Проходимось по кожному товару і створюємо HTML-елемент для відображення
+    products.forEach(product => {
+      const productElement = document.createElement("div");
+      productElement.classList.add("product");
+      productElement.dataset.category = product.name;
+
+      // Додаємо обробник подій для кожного товару
+      productElement.addEventListener("click", function () {
+        // Очищаємо контейнер перед виведенням деталей нового товару
+        productDetailsContainer.innerHTML = "";
+
+        // Створюємо елементи для відображення деталей товару
+        const titleElement = document.createElement("h2");
+        titleElement.textContent = product.title;
+
+        const priceElement = document.createElement("p");
+        priceElement.textContent = `Ціна: ${product.price.toFixed(2)} грн.`;
+
+        const imageElement = document.createElement("img");
+        imageElement.src = product.image;
+        imageElement.alt = product.title;
+
+        const infoElement = document.createElement("p");
+        infoElement.textContent = product.info;
+
+        // Додаємо можливість зміни кольору товару
+        // Створюємо список для вибору кольорів
+        const colorSelect = document.createElement("select");
+        colorSelect.innerHTML = "<option value='' selected disabled>Обрати вигляд</option>";
+        colorSelect.style.marginBottom = "10px";
+
+        // Додаємо кожен доступний колір до списку
+        Object.keys(product.colors).forEach(color => {
+          const option = document.createElement("option");
+          option.value = color;
+          option.text = color;
+          colorSelect.appendChild(option);
+        });
+
+        // Додаємо обробник подій до списку вибору кольору
+        colorSelect.addEventListener("change", function () {
+          // Отримуємо вибраний колір
+          const selectedColor = colorSelect.value;
+
+          // Отримуємо відповідну картинку для вибраного кольору
+
+          const selectedImage = product.colors[selectedColor];
+          imageElement.src = selectedImage;
+
+
+          // Змінюємо шлях картинки товару
+          imageElement.src = selectedImage;
+
+          console.log("Вибраний колір:", selectedColor);
+        });      
+
+        const butElement = document.createElement("button");
+        butElement.innerText = "Додати в кошик";
+
+
+        // додаємо обробник подій до кнопки "додати в кошик"
+        butElement.addEventListener("click", function () {
+          const cartItem = {
+            title: product.title,
+            price: product.price,
+            image: product.image,
+            // інші властивості товару, які вам потрібні
+          };
+
+          // Додаємо товар до кошика
+          cart.push(cartItem);
+
+          // Зберігаємо оновлений кошик в локальному сховищі
+          localStorage.setItem("cart", JSON.stringify(cart));
+
+          console.log("Товар додано в кошик")
+          console.log(cartItem)
+
+          const messange = document.createElement('div');
+          messange.innerText = "Товар додано в кошик";
+          productDetailsContainer.append(messange);
+        });
+
+
+        // Додаємо створені елементи до контейнера деталей товару
+        productDetailsContainer.appendChild(titleElement);
+        productDetailsContainer.appendChild(priceElement);
+        productDetailsContainer.appendChild(imageElement);
+        productDetailsContainer.appendChild(infoElement);
+        // Додаємо список вибору кольорів до контейнера деталей товару
+        productDetailsContainer.appendChild(colorSelect);
+        productDetailsContainer.appendChild(butElement);
+
+        // Додаємо кнопку для закриття вікна
+        const closeButton = document.createElement("button");
+        closeButton.innerText = "Закрити";
+        closeButton.style.margin = "10px";
+        closeButton.addEventListener("click", function () {
+          // Очищаємо контейнер для закриття вікна
+          productDetailsContainer.innerHTML = "";
+        });
+
+        // Додаємо кнопку для закриття вікна до контейнера деталей товару
+        productDetailsContainer.appendChild(closeButton);
+
+        // Прокручуємо сторінку, щоб вікно було видимим
+        productDetailsContainer.scrollIntoView({ behavior: "smooth" });
+
+      });
+
+      // Создаем элементы для отображения информации о товаре
+      const titleElement = document.createElement("h2");
+      titleElement.textContent = product.title;
+      titleElement.style.marginBottom = "0";
+
+      const priceElement = document.createElement("p");
+      priceElement.textContent = `Ціна: ${product.price.toFixed(2)} грн.`;
+
+      const imageElement = document.createElement("img");
+      imageElement.src = product.image;
+      imageElement.classList.add("product__image");
+      imageElement.alt = product.title;
+      imageElement.style.width = "100px";
+      imageElement.style.marginInline = "20px";
+      imageElement.style.marginBottom = "30px";
+
+      // Добавляем созданные элементы к элементу товара
+      productElement.appendChild(titleElement);
+      productElement.appendChild(priceElement);
+      productElement.appendChild(imageElement);
+
+      // Додаємо створений елемент товару до контейнера на сторінці
+      productsContainer.appendChild(productElement);
+    });
+  }
+
+  // Викликаємо функцію для ініціалізації з поточною кількістю колонок
+  changeColumns(currentColumns);
+
+
+  // Получаем все чекбоксы категорий
+  const categoryCheckboxes = document.querySelectorAll('.custom-checkbox__input');
+
+  // Получаем все товары
+  const productsArr = document.querySelectorAll('.product');
+
+
+  // Добавляем обработчик события для каждого чекбокса
+  categoryCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', updateProducts);
+  });
+
+  // Знаходимо кнопку "Скинути фільтри"
+  const resetFiltersButton = document.querySelector('.hide-filters.btn-reset');
+
+  // Додаємо обробник події для кнопки
+  resetFiltersButton.addEventListener('click', () => {
+    // Скидуємо всі вибрані чекбокси категорій
+    categoryCheckboxes.forEach(checkbox => {
+      checkbox.checked = false;
+    });
+    // Отображаем все продукты
+    productsArr.forEach(product => {
+      product.style.display = 'flex';
+    });
+  });
+
+  // Функция для обновления отображаемых товаров в зависимости от выбранных категорий
+  function updateProducts() {
+    // Получаем выбранные категории
+    const selectedCategories = Array.from(categoryCheckboxes)
+      .filter(checkbox => checkbox.checked)
+      .map(checkbox => checkbox.parentElement.dataset.text);
+
+    // Перебираем все товары и скрываем/показываем их в зависимости от выбранных категорий
+    productsArr.forEach(product => {
+      const productCategory = product.dataset.category;
+
+      if (selectedCategories.length === 0 || selectedCategories.includes(productCategory)) {
+        product.style.display = 'flex';
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  }
+
+  // Фільтруємо товары по категориям
+  const sortedProducts = Array.from(productsArr).sort((a, b) => {
+    const titleA = a.dataset.category.toUpperCase();
+    const titleB = b.dataset.category.toUpperCase();
+
+    if (titleA < titleB) {
+      return -1;
+    }
+    if (titleA > titleB) {
+      return 1;
+    }
+    return 0;
+  });
+
+  // Очищаем контейнер перед добавлением відфільтрованих товаров
+  productsContainer.innerHTML = '';
+
+  // Добавляем відфільтровані товари к контейнеру на странице
+  sortedProducts.forEach(product => {
+    productsContainer.appendChild(product);
+  });
+
+
+
+  // СОРТУВАННЯ ТОВАРІВ ПО ЦІНІ ТА НАЗВІ
+
+  // Фільтруємо товари по ціні
+  const sortProductsByPrice = () => {
+    // Отримуємо значення вибору з селектора
+    const selectedValue = sortSelect.value;
+
+    if (selectedValue === 'name') {
+      // Очищаем контейнер перед добавлением відфільтрованих товаров
+      productsContainer.innerHTML = '';
+
+      // Добавляем відфільтровані товари к контейнеру на странице
+      sortedProducts.forEach(product => {
+        productsContainer.appendChild(product);
+      });
+    }
+
+    // Якщо вибрано опцію "Спочатку дешевші" або "Спочатку дорожчі"
+    if (selectedValue === 'cheap' || selectedValue === 'expensive') {
+      // Створюємо копію масиву товарів для сортування
+      const sortedProducts = Array.from(productsArr);
+
+      // Сортуємо товари за ціною
+      sortedProducts.sort((a, b) => {
+        const priceA = parseFloat(a.querySelector('p').textContent.split(' ')[1]);
+        const priceB = parseFloat(b.querySelector('p').textContent.split(' ')[1]);
+
+        return selectedValue === 'cheap' ? priceA - priceB : priceB - priceA;
+      });
+
+      // Очищаємо контейнер перед додаванням відсортованих товарів
+      productsContainer.innerHTML = '';
+
+      // Додаємо відсортовані товари до контейнеру на сторінці
+      sortedProducts.forEach(product => {
+        productsContainer.appendChild(product);
+      });
+    }
+  };
+
+  // Додаємо обробник подій для селектора
+  sortSelect.addEventListener('change', sortProductsByPrice);
+
+
+</script>
+            </div>
+          </div>
+    </section>
+
+  </main>
+
+  <footer class="footer footer--2">
+	<div class="container footer__container">
+    <div class="footer__content">
+      <div class="footer__top">
+        <div class="footer__column">
+          <ul class="social footer__social">
+            <li class="social__item"><a href="#" class="social__link social__link--tw" aria-label="Go to twitter"></a>
+            </li>
+            <li class="social__item"><a href="#" class="social__link social__link--fb" aria-label="Go to facebook"></a>
+            </li>
+            <li class="social__item"><a href="#" class="social__link social__link--in" aria-label="Go to instagram"></a>
+            </li>
+            <li class="social__item"><a href="#" class="social__link social__link--pin"
+                aria-label="Go to pinterest"></a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <ul class="footer__list footer__list--row">
+            <li class="footer__item"><a href="#" class="footer__link footer__link--row">Правила повернення товару</a></li>
+            <li class="footer__item"><a href="#" class="footer__link footer__link--row">Політика конфіденційності</a></li>
+          </ul>
+        </div>
+        <div class="footer__column footer__column--flex">
+          <div class="footer__select">
+            <span class="footer__select-caption">Валюта</span>
+            <div class="custom-select custom-select--footer" tabindex="0">
+              <div class="custom-select__top">ГРН</div>
+              <div class="custom-select__dropdown">
+                <ul class="custom-select__list">
+                  <li class="custom-select__item">USD</li>
+                  <li class="custom-select__item">EUR</li>
+                  <li class="custom-select__item">GRN</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__select">
+            <span class="footer__select-caption">Мова</span>
+            <div class="custom-select custom-select--footer" tabindex="0">
+              <div class="custom-select__top">Українська</div>
+              <div class="custom-select__dropdown">
+                <ul class="custom-select__list">
+                  <li class="custom-select__item">English</li>
+                  <li class="custom-select__item">Italian</li>
+                  <li class="custom-select__item">Ukraine</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__left">
+          <small class="footer__copy">
+            ©2024 МАГАЗИН КРЕАТИВНІ РУЧНІ ВИРОБИ Всі права захищені
+          </small>
+        </div>
+        <div class="footer__right">
+          <img src="img/payment.png" aria-hidden="true" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <a href="#" class="to-top">
+    <img src="./img/up_arrow.jpg" alt="#" />
+  </a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const wrapMenu = document.querySelector('.wrap-menu');
+      const menuItems = document.querySelector('.menu-items');
+      const burgerIcon = document.querySelector('.burger-icon');
+      const closeIcon = document.querySelector('.close-icon');
+
+      menuItems.classList.toggle('active');
+      wrapMenu.classList.toggle('active');
+      burgerIcon.classList.toggle('active');
+      closeIcon.classList.toggle('hidden'); // Додано перевірку для приховування/показу іконки
+    }
+  </script>
+
+</body>
+
+</html>
